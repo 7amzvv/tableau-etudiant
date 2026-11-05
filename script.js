@@ -3,6 +3,7 @@ const taskList = document.getElementById('task-list');
 const planningList = document.getElementById('planning-list');
 const filter = document.getElementById('filter-tasks');
 const dateInput = document.getElementById('task-date');
+// Les tâches sont partagées entre les pages grâce au stockage du navigateur.
 const storedTasks = localStorage.getItem('campusTasks');
 let tasks = storedTasks ? JSON.parse(storedTasks) : [];
 
@@ -46,7 +47,9 @@ function updateSummary() {
 
     if (planningList) {
         planningList.innerHTML = '';
-        const today = new Date().toISOString().slice(0, 10);
+        const currentDate = new Date();
+        const today = [currentDate.getFullYear(), String(currentDate.getMonth() + 1).padStart(2, '0'), String(currentDate.getDate()).padStart(2, '0')].join('-');
+        // Le planning affiche uniquement les échéances du jour et des jours suivants.
         const futureTasks = upcoming.filter(function (task) { return task.date >= today; });
         document.getElementById('planning-empty').style.display = futureTasks.length ? 'none' : 'block';
         futureTasks.forEach(function (task) {
