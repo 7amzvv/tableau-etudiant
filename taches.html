@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes tâches — Mon espace étudiant</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="topbar"><a class="brand" href="accueil.html">Mon espace étudiant</a><time class="date" id="today-date"></time></header>
+    <nav class="navigation" aria-label="Navigation principale">
+        <a href="accueil.html">Accueil</a><a class="active" href="taches.html" aria-current="page">Mes tâches</a><a href="planning.html">Planning</a>
+    </nav>
+    <main class="page">
+        <section class="page-heading"><p class="eyebrow">ORGANISATION</p><h1>Mes tâches</h1><p>Ajoute tes devoirs et garde leur avancement à jour.</p></section>
+        <div class="tasks-layout">
+            <section class="panel task-panel">
+                <div class="section-heading"><h2>Liste des tâches</h2>
+                    <label class="filter-wrap"><span class="visually-hidden">Filtrer les tâches</span><select id="filter-tasks"><option value="all">Toutes</option><option value="todo">À faire</option><option value="done">Terminées</option></select></label>
+                </div>
+                <div id="task-list" class="task-list" aria-live="polite"></div>
+                <p id="empty-message" class="empty-message">Aucune tâche pour l’instant.</p>
+            </section>
+            <section class="panel add-panel">
+                <h2>Ajouter une tâche</h2>
+                <form id="task-form">
+                    <label for="task-title">Titre</label><input id="task-title" type="text" maxlength="70" placeholder="Ex. Réviser les tableaux" required>
+                    <label for="task-course">Cours</label><input id="task-course" type="text" maxlength="35" placeholder="Ex. Programmation">
+                    <label for="task-date">Échéance</label><input id="task-date" type="date">
+                    <label for="task-priority">Priorité</label><select id="task-priority"><option value="Normale">Normale</option><option value="Importante">Importante</option><option value="Urgente">Urgente</option></select>
+                    <button class="add-button" type="submit">Ajouter la tâche</button>
+                </form>
+                <p class="private-note">Les tâches restent enregistrées sur cet appareil.</p>
+            </section>
+        </div>
+        <p class="credit">Hamza FADLI</p>
+    </main>
+</body>
+</html>
+
