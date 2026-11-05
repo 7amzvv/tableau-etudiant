@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planning — Mon espace étudiant</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="topbar"><a class="brand" href="accueil.html">Mon espace étudiant</a><time class="date" id="today-date"></time></header>
+    <nav class="navigation" aria-label="Navigation principale">
+        <a href="accueil.html">Accueil</a><a href="taches.html">Mes tâches</a><a class="active" href="planning.html" aria-current="page">Planning</a>
+    </nav>
+    <main class="page">
+        <section class="page-heading"><p class="eyebrow">MES ÉCHÉANCES</p><h1>Planning</h1><p>Les tâches avec une date apparaissent ici, dans l’ordre.</p></section>
+        <section class="panel planning-panel">
+            <h2>À venir</h2>
+            <div id="planning-list" class="planning-list" aria-live="polite"></div>
+            <p id="planning-empty" class="empty-message">Aucune échéance à venir. Tu peux en ajouter dans Mes tâches.</p>
+            <a class="text-link" href="taches.html">Ajouter une tâche</a>
+        </section>
+        <p class="credit">Hamza FADLI</p>
+    </main>
+</body>
+</html>
+
