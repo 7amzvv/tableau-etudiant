@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil — Mon espace étudiant</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="accueil.html">Mon espace étudiant</a>
+        <time class="date" id="today-date"></time>
+    </header>
+    <nav class="navigation" aria-label="Navigation principale">
+        <a class="active" href="accueil.html" aria-current="page">Accueil</a>
+        <a href="taches.html">Mes tâches</a>
+        <a href="planning.html">Planning</a>
+    </nav>
+    <main class="page">
+        <section class="welcome">
+            <p class="eyebrow">MON ESPACE ÉTUDIANT</p>
+            <h1>Bonjour Hamza</h1>
+            <p>Retrouve ici un aperçu de tes tâches et de tes prochaines échéances.</p>
+        </section>
+        <section class="summary" aria-label="Résumé de mes tâches" aria-live="polite">
+            <article class="summary-card"><span>À faire</span><strong id="todo-count">0</strong><small>tâches restantes</small></article>
+            <article class="summary-card"><span>Terminées</span><strong id="done-count">0</strong><small>tâches accomplies</small></article>
+        </section>
+        <section class="panel overview-panel">
+            <h2>Prochaine échéance</h2>
+            <p class="next-task" id="next-title">Aucune échéance pour le moment.</p>
+            <p class="task-meta" id="next-date"></p>
+            <a class="text-link" href="planning.html">Voir mon planning</a>
+        </section>
+        <p class="credit">Hamza FADLI</p>
+    </main>
+</body>
+</html>
+
